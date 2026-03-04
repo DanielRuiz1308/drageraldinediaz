@@ -1,0 +1,426 @@
+/* =========================
+   RESET
+========================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* =========================
+   BASE
+========================= */
+body{
+    font-family: 'Poppins', sans-serif;
+    background:#ffffff;
+    color:#1f1f1f;
+    line-height:1.6;
+}
+
+/* =========================
+   HEADER (INDEX Y CONTACTO)
+========================= */
+.header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:20px 8%;
+    background:#ffffff;
+    border-bottom:1px solid #ececec;
+}
+
+.logo{
+    height:75px;
+}
+
+.nav-principal{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+.nav-principal ul{
+    list-style:none;
+    display:flex;
+    gap:40px;
+}
+
+.nav-principal a{
+    text-decoration:none;
+    color:#444;
+    font-weight:500;
+    transition:0.3s ease;
+}
+
+.nav-principal a:hover{
+    color:#8b1e3f;
+}
+
+.btn-header{
+    padding:10px 24px;
+    background:#8b1e3f;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:500;
+    transition:0.3s ease;
+}
+
+.btn-header:hover{
+    background:#6f1732;
+}
+
+/* =========================
+   HERO INDEX
+========================= */
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:60px 8% 80px 8%;
+    gap:60px;
+    background:#f8fafb;
+}
+
+.hero-texto{
+    max-width:520px;
+}
+
+.hero-texto h2{
+    font-family:'Playfair Display', serif;
+    font-size:46px;
+    line-height:1.2;
+    margin-bottom:20px;
+}
+
+.hero-texto h2::after{
+    content:"";
+    display:block;
+    width:150px;
+    height:3px;
+    background:#8b1e3f;
+    margin-top:18px;
+}
+
+.hero-texto p{
+    font-size:18px;
+    color:#6b7280;
+    margin-bottom:25px;
+}
+
+.btn-custom{
+    display:inline-block;
+    padding:14px 34px;
+    background:#8b1e3f;
+    color:white;
+    text-decoration:none;
+    border-radius:40px;
+    font-weight:500;
+    transition:0.3s ease;
+}
+
+.btn-custom:hover{
+    background:#6f1732;
+}
+
+.hero-info{
+    margin-top:22px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    font-size:14px;
+    color:#6b7280;
+}
+
+.hero-imagen img{
+    width:340px;
+    max-width:100%;
+    border-radius:22px;
+    box-shadow:0 25px 60px rgba(0,0,0,0.12);
+}
+
+/* =========================
+   BENEFICIOS INDEX
+========================= */
+.beneficios{
+    padding:100px 8%;
+}
+
+.beneficios h2{
+    font-family:'Playfair Display', serif;
+    font-size:34px;
+    margin-bottom:50px;
+}
+
+.cards{
+    display:flex;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.card-custom{
+    flex:1;
+    min-width:260px;
+    background:#f9fafb;
+    padding:35px;
+    border-radius:18px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.05);
+    transition:0.3s ease;
+}
+
+.card-custom:hover{
+    transform:translateY(-6px);
+    box-shadow:0 20px 50px rgba(0,0,0,0.08);
+}
+
+.card-custom h3{
+    color:#8b1e3f;
+    margin-bottom:15px;
+}
+
+/* =========================
+   CONTACTO
+========================= */
+.contacto-wireframe{
+    padding:100px 8%;
+    background:#f8fafb;
+}
+
+.contacto-card{
+    display:flex;
+    gap:60px;
+    align-items:flex-start;
+    justify-content:space-between;
+}
+
+.contacto-info{
+    flex:1;
+    max-width:500px;
+}
+
+.contacto-info h2{
+    font-family:'Playfair Display', serif;
+    font-size:36px;
+    margin-bottom:20px;
+}
+
+.contacto-info h2::after{
+    content:"";
+    display:block;
+    width:150px;
+    height:3px;
+    background:#8b1e3f;
+    margin-top:15px;
+}
+
+.contacto-info p{
+    color:#6b7280;
+    margin-bottom:30px;
+}
+
+.contacto-links{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.contacto-links a{
+    text-decoration:none;
+    color:#8b1e3f;
+    font-weight:500;
+}
+
+.contacto-mapa{
+    flex:1;
+}
+
+.contacto-mapa iframe{
+    width:100%;
+    height:380px;
+    border:0;
+    box-shadow:0 30px 80px rgba(0,0,0,0.12);
+}
+
+.direccion{
+    margin-top:15px;
+    font-size:14px;
+    color:#6b7280;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer{
+    background:#111;
+    color:#d1d5db;
+    padding:50px 8%;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.footer a{
+    color:#d1d5db;
+    text-decoration:none;
+}
+
+.footer a:hover{
+    color:#8b1e3f;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media(max-width:900px){
+
+    .header{
+        flex-direction:column;
+        gap:20px;
+        padding:20px 5%;
+    }
+
+    .nav-principal ul{
+        flex-direction:column;
+        gap:12px;
+        align-items:center;
+    }
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        padding:60px 5%;
+        gap:40px;
+    }
+
+    .hero-texto{
+        max-width:100%;
+    }
+
+    .hero-texto h2{
+        font-size:32px;
+    }
+
+    .hero-texto h2::after{
+        margin:18px auto 0 auto;
+    }
+
+    .cards{
+        flex-direction:column;
+    }
+
+    .contacto-wireframe{
+        padding:60px 5%;
+    }
+
+    .contacto-card{
+        flex-direction:column;
+        gap:40px;
+        text-align:center;
+    }
+
+    .contacto-info h2::after{
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .contacto-mapa iframe{
+        height:300px;
+    }
+
+    .footer{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+
+/* =========================
+   SERVICIOS (BOOTSTRAP PAGE)
+========================= */
+
+.servicios-hero{
+    padding:80px 0;
+    background:#f8fafb;
+    text-align:center;
+}
+
+.servicios-hero h1{
+    font-family:'Playfair Display', serif;
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.servicios-hero p{
+    color:#6b7280;
+}
+
+.video-consultorio{
+    width:100%;
+    border-radius:20px;
+}
+
+.titulo-seccion{
+    font-family:'Playfair Display', serif;
+    margin-bottom:20px;
+}
+
+.texto-secundario{
+    color:#6b7280;
+}
+
+.lista-consultorio{
+    list-style:none;
+    padding:0;
+}
+
+.lista-consultorio li{
+    margin-bottom:10px;
+}
+
+.destacado{
+    background:#f3f4f6;
+    padding:25px;
+    border-radius:15px;
+}
+
+.btn-consulta{
+    display:inline-block;
+    margin-top:10px;
+    padding:10px 25px;
+    background:#8b1e3f;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+}
+
+.servicio-card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.05);
+    transition:0.3s ease;
+}
+
+.servicio-card:hover{
+    transform:translateY(-5px);
+}
+
+.servicio-card h3{
+    margin-bottom:15px;
+}
+
+.servicio-card ul{
+    list-style:none;
+    padding:0;
+}
+
+.cta-final{
+    padding:80px 0;
+}
+
+.btn-principal{
+    background:#8b1e3f;
+    color:white;
+    border:none;
+}
