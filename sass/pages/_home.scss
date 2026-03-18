@@ -1,0 +1,264 @@
+@use '../utilities/variables';
+@use '../utilities/mixin';
+
+/* HEADER */
+.header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:20px 8%;
+    background:#ffffff;
+    border-bottom:1px solid #ececec;
+}
+
+.logo{
+    height:75px;
+}
+
+.nav-principal{
+    flex:1;
+    display:flex;
+    justify-content:center;
+
+    ul{
+        list-style:none;
+        display:flex;
+        gap:40px;
+    }
+
+    a{
+        text-decoration:none;
+        color:#444;
+        font-weight:500;
+
+        &:hover{
+            color:variables.$color-principal;
+        }
+    }
+}
+
+.btn-header{
+    @include mixin.boton(variables.$color-principal, white);
+    padding:10px 24px;
+
+    &:hover{
+        background:variables.$color-hover;
+    }
+}
+
+.btn-custom{
+    @include mixin.boton(variables.$color-principal, white);
+    padding:14px 34px;
+    border-radius:40px;
+    display:inline-block;
+    font-weight:500;
+
+    &:hover{
+        background:variables.$color-hover;
+    }
+}
+
+/* HERO */
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:60px 8% 80px;
+    gap:60px;
+    background:variables.$color-fondo;
+
+    &-texto{
+        max-width:520px;
+
+        h2{
+            font-family:variables.$fuente-titulo;
+            font-size:46px;
+            margin-bottom:20px;
+
+            &::after{
+                content:"";
+                display:block;
+                width:150px;
+                height:3px;
+                background:variables.$color-principal;
+                margin-top:18px;
+            }
+        }
+
+        p{
+            color:variables.$color-secundario;
+            margin-bottom:25px;
+        }
+    }
+
+    &-imagen img{
+        width:340px;
+        border-radius:22px;
+        box-shadow:0 25px 60px rgba(0,0,0,0.12);
+    }
+}
+
+/* BENEFICIOS */
+.beneficios{
+    padding:100px 8%;
+
+    h2{
+        font-family:variables.$fuente-titulo;
+        margin-bottom:50px;
+    }
+}
+
+.cards{
+    display:flex;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.card-custom{
+    flex:1;
+    min-width:260px;
+    background:#f9fafb;
+    padding:35px;
+    border-radius:18px;
+
+    &:hover{
+        transform:translateY(-6px);
+    }
+
+    h3{
+        color:variables.$color-principal;
+    }
+}
+
+/* CONTACTO */
+.contacto-wireframe{
+    padding:100px 8%;
+    background:variables.$color-fondo;
+}
+
+.contacto-card{
+    display:flex;
+    gap:60px;
+    align-items:flex-start;
+    justify-content:space-between;
+}
+
+.contacto-info{
+    flex:1;
+    max-width:500px;
+
+    h2{
+        font-family:variables.$fuente-titulo;
+        font-size:36px;
+        margin-bottom:20px;
+
+        &::after{
+            content:"";
+            display:block;
+            width:180px;
+            height:3px;
+            background:variables.$color-principal;
+            margin-top:15px;
+        }
+    }
+
+    p{
+        color:variables.$color-secundario;
+        margin-bottom:30px;
+    }
+}
+
+.contacto-links{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+
+    a{
+        text-decoration:none;
+        color:variables.$color-principal;
+        font-weight:500;
+
+        &:hover{
+            color:variables.$color-hover;
+        }
+    }
+}
+
+.contacto-mapa{
+    flex:1;
+
+    iframe{
+        width:100%;
+        height:380px;
+        border:0;
+        border-radius:12px;
+        box-shadow:0 30px 80px rgba(0,0,0,0.12);
+    }
+}
+
+.direccion{
+    margin-top:15px;
+    font-size:14px;
+    color:variables.$color-secundario;
+}
+
+/* FOOTER */
+.footer{
+    background:variables.$color-footer;
+    color:#d1d5db;
+    padding:50px 8%;
+}
+
+/* SERVICIOS (BOOTSTRAP) */
+.servicios-hero{
+    padding:80px 0;
+    background:variables.$color-fondo;
+    text-align:center;
+
+    h1{
+        font-family:variables.$fuente-titulo;
+    }
+
+    p{
+        color:variables.$color-secundario;
+    }
+}
+
+.video-consultorio{
+    width:100%;
+    border-radius:20px;
+}
+
+.titulo-seccion{
+    font-family:variables.$fuente-titulo;
+}
+
+.texto-secundario{
+    color:variables.$color-secundario;
+}
+
+.destacado{
+    background:#f3f4f6;
+    padding:25px;
+    border-radius:15px;
+}
+
+.btn-consulta{
+    @include mixin.boton(variables.$color-principal, white);
+    padding:10px 25px;
+}
+
+.servicio-card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+
+    &:hover{
+        transform:translateY(-5px);
+    }
+}
+
+.btn-principal{
+    background:variables.$color-principal;
+    color:white;
+}

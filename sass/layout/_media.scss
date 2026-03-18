@@ -1,0 +1,28 @@
+@use '../utilities/variables';
+
+@media(max-width:900px){
+
+    .header{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .cards{
+        flex-direction:column;
+    }
+
+    .contacto-card{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .footer{
+        flex-direction:column;
+        text-align:center;
+    }
+}

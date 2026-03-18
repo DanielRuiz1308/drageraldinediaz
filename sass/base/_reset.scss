@@ -1,0 +1,14 @@
+@use '../utilities/variables';
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: variables.$fuente-principal;
+    background: variables.$color-fondo;
+    color: variables.$color-texto;
+    line-height:1.6;
+}
